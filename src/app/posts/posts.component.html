@@ -1,0 +1,6 @@
+<div [ngSwitch]="currentView">
+    <app-posts-form (formSubmit)="createPost($event)" *ngSwitchCase= "View.CREATE">
+    </app-posts-form>
+    <app-posts-list [post]="posts" *ngSwitchCase= "View.SHOW_ALL" (buttonClick)="changeCurrentView(View.CREATE)">
+    </app-posts-list>
+</div>

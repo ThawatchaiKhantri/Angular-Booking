@@ -1,0 +1,10 @@
+<div>
+    <img #preview src="{{ image }}" class="img-thumbnail image">
+    <!-- <input #uploader type="file" accept="image/png" class="invisible" (change)="uploadImage($event)" />
+    <button class="btn btn-secondary btn-lg btn-block" (click)="triggerFileUpload()">
+        Choose a picture
+    </button> -->
+    <hr>
+    <button class="btn btn-secondary btn-lg btn-block" (click)="fileUpload.click()">Choose a picture</button>
+    <input #uploader type="file" accept="image/png" (change)="uploadImage($event)" #fileUpload hidden>
+</div>

@@ -1,0 +1,23 @@
+<h2 class="text-xs-center">Blog Podtd Form</h2>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <app-post-form-image 
+        [image]="model.image"
+        (imageChange)="changeImage($event)"></app-post-form-image>
+    </div>
+    <div class="col-md-8">
+        <form (submit)="createPosts()">
+            <div class="form-group">
+                <label>Title</label>
+                <input type="text" name="title" [(ngModel)]="model.title" class="form-control" placeholder="Title" />
+            </div>
+            <div class="form-group">
+                <label>Content</label>
+                <textarea name="content" [(ngModel)]="model.content" rows="5" class="form-control">
+            </textarea>
+            </div>
+            <button type="submit" class="btn btn-primary fliat-xs-rifhr">Create</button>
+        </form>
+    </div>
+</div>
